@@ -1,17 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import PrimarySearchAppBar from './Components/Header';
-import Footer from './Components/Footer';
-import SignUp from './Components/SignUp';
-import LogIn from './Components/LogIn';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
 
 function App() {
   return (
     <>
-      {/* <PrimarySearchAppBar />
-      <Footer /> */}
-      {/* <SignUp /> */}
-      <LogIn />
+
+      <Routes>
+        <Route  path='/' element={<HomePage />}/>
+        {/* // <Route  path='/Category' element={LivingRoomCategoryPage}/>  
+        // <Route  path='' element={LivingRoomPage}/>
+        // <Route  path='' element=''/>
+        // <Route  path='' element=''/> */}
+      </Routes>
     </>
     
   );

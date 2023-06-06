@@ -15,14 +15,14 @@ const x = ['About', 'Blog', 'Support'];
 function Footer() {
     return (
         <div className='footer'>
-            <Stack direction="row">
-            <Stack  flex={3} spacing={5} direction="row"  sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Stack direction="row" sx={{ flexDirection: { xs: 'column', md: 'row' } }} justifyContent='center' alignItems='center'>
+            <Stack  flex={3}  direction="row" spacing={{xs: 0 , md: 5}} sx={{  flexDirection: { xs: 'column', md: 'row' } }}  >
                 {pages.map((page) => (    
                         <Typography sx={{color:'white'}} textAlign="center" >{page}</Typography>
                     ))}
             </Stack> 
 
-            <Box flex={.13}>
+            <Box flex={.13}  sx={{ display: {  xs: 'none', md:'flex', opacity:'0.7' }}} >
             <img width={30} height={30}  src='images/Logo.png' ></img>
             
             </Box>
@@ -38,7 +38,7 @@ function Footer() {
                 MAYNOOTH
             </Typography>
 
-            <Stack flex={1} spacing={5} direction="row"  sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Stack flex={1}  direction="row" spacing={{xs: 0 , md: 5}} sx={{  flexDirection: { xs: 'column', md: 'row' } }}  >
                 {x.map((p) => (    
                         <Typography sx={{color:'white'}} textAlign="center">{p}</Typography>
                     ))}
