@@ -60,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header() {
+ const Header = ({totalItems}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -165,8 +165,10 @@ export default function Header() {
 
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="shopping" color="inherit">
-            
-               <ShoppingCartIcon />
+                  <Badge badgeContent={totalItems}>
+                   <ShoppingCartIcon />
+                  </Badge>
+              
         
             </IconButton>
         
@@ -208,3 +210,4 @@ export default function Header() {
     </Box>
   );
 }
+export default Header 
